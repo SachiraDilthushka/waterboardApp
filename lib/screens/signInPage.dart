@@ -50,7 +50,7 @@ class _SignInPageState extends State<SignInPage> {
                     padding: EdgeInsets.only(left: 30, right: 30),
                     child: Center(
                       child: Text(
-                        'National Water Supply & Drainage Borad',
+                        'National Water Supply & Drainage Board',
                         style: TextStyle(
                           fontSize: 30,
                           color: Colors.blue,
