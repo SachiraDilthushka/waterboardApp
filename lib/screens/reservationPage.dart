@@ -102,7 +102,7 @@ class _ReservationPageState extends State<ReservationPage> {
                   child: Text(
                     "Vehicle Number:",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 18,
                       color: Colors.black,
                     ),
                   ),
@@ -147,7 +147,7 @@ class _ReservationPageState extends State<ReservationPage> {
                   child: Text(
                     "Location:",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 18,
                       color: Colors.black,
                     ),
                   ),
@@ -193,7 +193,7 @@ class _ReservationPageState extends State<ReservationPage> {
                   child: Text(
                     "Reserve a Slot:",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 18,
                       color: Colors.black,
                     ),
                   ),
@@ -239,7 +239,7 @@ class _ReservationPageState extends State<ReservationPage> {
                   child: Text(
                     "Book a Slot:",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 18,
                       color: Colors.black,
                     ),
                   ),

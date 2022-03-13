@@ -139,7 +139,7 @@ class _SignInPageState extends State<SignInPage> {
                                   labelStyle: const TextStyle(
                                       fontSize: 24, color: Colors.grey),
                                   hintText: '*********',
-                                  icon: const Icon(Icons.key_outlined),
+                                  icon: const Icon(Icons.security_outlined),
                                   suffixIcon: IconButton(
                                     icon: Icon(_secureText
                                         ? Icons.visibility_outlined
