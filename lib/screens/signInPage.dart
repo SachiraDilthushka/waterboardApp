@@ -143,18 +143,7 @@ class _SignInPageState extends State<SignInPage> {
                                     icon: Icon(_secureText
                                         ? Icons.visibility_outlined
                                         : Icons.visibility_off_outlined),
-                                    onPressed: () async{
-                                      if(_formKey.currentState!.validate()){
-                                        //save()
-
-                                        Navigator.pushAndRemoveUntil(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (builder) => const HomePage()),
-                                                (route) => false);
-                                      }else{
-                                        print("Not ok");
-                                      }
+                                    onPressed: (){
                                       setState(() {
                                         _secureText = !_secureText;
                                       });
@@ -175,7 +164,7 @@ class _SignInPageState extends State<SignInPage> {
                                       builder: (context) =>
                                           ResetPasswordPage()));
                             },
-                            child: Text(
+                            child: const Text(
                               'Forgot your Password?',
                               style: TextStyle(
                                 fontSize: 16,
@@ -197,35 +186,40 @@ class _SignInPageState extends State<SignInPage> {
                               color: Colors.indigo,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
-                              onPressed: () async {
-                                if (_formKey.currentState!.validate()) {
-                                  // save();
-                                } else {
-                                  print("Not ok");
-                                }
-                                setState(() {
-                                  circular = true;
-                                });
-                                try {
-                                  setState(() {
-                                    circular = false;
-                                  });
-                                  Navigator.pushAndRemoveUntil(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (builder) =>
-                                              const HomePage()),
-                                      (route) => false);
-                                } catch (e) {
-                                  final snackBar =
-                                      SnackBar(content: Text(e.toString()));
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(snackBar);
-                                  print(e);
-                                  setState(() {
-                                    circular = false;
-                                  });
-                                }
+                              onPressed: ()  {
+
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            HomePage()));
+                                // if (_formKey.currentState!.validate()) {
+                                //   // save();
+                                //
+                                // } else {
+                                //   print("Not ok");
+                                // }
+                                // setState(() {
+                                //   circular = false;
+                                // });
+                                // try {
+                                //
+                                //   Navigator.pushAndRemoveUntil(
+                                //       context,
+                                //       MaterialPageRoute(
+                                //           builder: (builder) =>
+                                //               const HomePage()),
+                                //       (route) => false);
+                                // } catch (e) {
+                                //   final snackBar =
+                                //       SnackBar(content: Text(e.toString()));
+                                //   ScaffoldMessenger.of(context)
+                                //       .showSnackBar(snackBar);
+                                //   print(e);
+                                //   setState(() {
+                                //     circular = false;
+                                //   });
+                                // }
                               },
                               child: circular
                                   ? const CircularProgressIndicator()
