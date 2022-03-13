@@ -76,6 +76,7 @@ class _SignInPageState extends State<SignInPage> {
                   Container(
                     alignment: Alignment.center,
                     child: Form(
+                      key:_formKey,
                         child: Column(
                       children: [
                         const SizedBox(
@@ -138,7 +139,7 @@ class _SignInPageState extends State<SignInPage> {
                                   labelStyle: const TextStyle(
                                       fontSize: 24, color: Colors.grey),
                                   hintText: '*********',
-                                  icon: const Icon(Icons.security_outlined),
+                                  icon: const Icon(Icons.key_outlined),
                                   suffixIcon: IconButton(
                                     icon: Icon(_secureText
                                         ? Icons.visibility_outlined
@@ -186,22 +187,27 @@ class _SignInPageState extends State<SignInPage> {
                               color: Colors.indigo,
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(5.0)),
-                              onPressed: ()  {
+                              onPressed: () async {
 
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            HomePage()));
-                                // if (_formKey.currentState!.validate()) {
-                                //   // save();
-                                //
-                                // } else {
-                                //   print("Not ok");
-                                // }
-                                // setState(() {
-                                //   circular = false;
-                                // });
+                                // Navigator.push(
+                                //     context,
+                                //     MaterialPageRoute(
+                                //         builder: (context) =>
+                                //             HomePage()));
+                                if (_formKey.currentState!.validate()) {
+                                  // save();
+                                  Navigator.pushAndRemoveUntil(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (builder) =>
+                                          const HomePage()),
+                                          (route) => false);
+                                } else {
+                                  print("Not ok");
+                                }
+                                setState(() {
+                                  circular = false;
+                                });
                                 // try {
                                 //
                                 //   Navigator.pushAndRemoveUntil(

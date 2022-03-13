@@ -50,6 +50,7 @@ class _BookingLocationPageState extends State<BookingLocationPage> {
     BookingLocationPage(),
 
   ];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Form(
@@ -63,8 +64,9 @@ class _BookingLocationPageState extends State<BookingLocationPage> {
             const Padding(
               padding: EdgeInsets.only(
                 left: 10,
-                right: 10,
-                top: 2,
+                top: 10,
+                right: 20,
+
                 bottom: 2,
               ),
               child: Text(
@@ -89,7 +91,7 @@ class _BookingLocationPageState extends State<BookingLocationPage> {
               child: Text(
                 "Current Location in vehicle:",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 18,
                   color: Colors.black,
                 ),
               ),
@@ -97,9 +99,9 @@ class _BookingLocationPageState extends State<BookingLocationPage> {
             Padding(
               padding: const EdgeInsets.only(
                 left: 10,
-                right: 10,
-                top: 2,
-                bottom: 2,
+                right: 20,
+                top: 5,
+                bottom: 5,
               ),
               child: DropdownButtonFormField(
                 items: locationOptions
@@ -128,14 +130,14 @@ class _BookingLocationPageState extends State<BookingLocationPage> {
             const Padding(
               padding: EdgeInsets.only(
                 left: 10,
-                right: 10,
-                top: 2,
-                bottom: 2,
+                right: 20,
+                top: 5,
+                bottom: 5,
               ),
               child: Text(
                 "Destination Location:",
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 18,
                   color: Colors.black,
                 ),
               ),
@@ -143,9 +145,9 @@ class _BookingLocationPageState extends State<BookingLocationPage> {
             Padding(
               padding: const EdgeInsets.only(
                 left: 10,
-                right: 10,
-                top: 2,
-                bottom: 2,
+                right: 20,
+                top: 5,
+                bottom: 5,
               ),
               child: DropdownButtonFormField(
                 items: reserveSlotOptions
